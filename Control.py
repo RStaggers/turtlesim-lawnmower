@@ -186,102 +186,10 @@ def lawnmower(speed, is_forward):
         rotate(5, 89.5, False)
         # print 'x=' ,x, 'y=' ,y, 'yaw=' ,yaw
         print (distance)
-           #if (x==x0):
-             #   continue
-            #print 'Success'
-
-
-    #velocity_message.linear.x =abs(speed)
-
-    #			elif   (x>= x0+distance-0.03) and (y >= y0+distance-0.031):
-    #           			print 'x=' ,x, 'y=' ,y, 'yaw=' ,yaw
-    #				rospy.loginfo("Spot TWO")
-    #	   			rotate (30,90.5,True)
-    #				go_to_goal(x0+2*distance, y0+distance,.25)
-    #
-    #if not (x<= x0+2*distance-0.03) and (y >= y0+distance): break
-
-    #	               	elif     (x>= x0+2*distance-0.03) and (y>= y0+distance):
-    #            			print 'x=' ,x, 'y=' ,y, 'yaw=' ,yaw
-    #				rospy.loginfo("Spot THREE")
-    #				rotate (30,90.5,True)
-    #				go_to_goal(x0+2*distance, y0,.25)
-
-    #if not (x>= x0+2*distance) and (y>= y0+distance): break
-
-    #			elif     (x>= x0+2*distance) and (y <= y0):
-    #            			print 'x=' ,x, 'y=' ,y, 'yaw=' ,yaw
-    #				rospy.loginfo("Spot FOUR")
-    #				x0=x
-    #				y0=y
-    #				rotate (30,90.5,False)
-    #				go_to_goal(x0+distance, y0,.25)
-
-    #			if not (x>= x0+2*distance) and (y <= y0): continue
-
-
+          
     #finally, stop the robot when the distance is moved
     velocity_message.linear.x =0
     velocity_publisher.publish(velocity_message)
-
-
-#def setDesiredOrientation(desired_angle_radians):
- #   relative_angle_radians = desired_angle_radians - yaw
-  #  if relative_angle_radians < 0:
-   #     clockwise = 1
-   # else:
-    #    clockwise = 0
-  #  print (relative_angle_radians)
-   # print (desired_angle_radians)
-  #  rotate(30 ,math.degrees(abs(relative_angle_radians)), clockwise)
-
-#def gridClean():
-
- #   desired_pose = Pose()
-  #  desired_pose.x = 1
-   # desired_pose.y = 1
-    #desired_pose.theta = 0
-
-   # moveGoal(desired_pose, 0.01)
-
-    #setDesiredOrientation(degrees2radians(desired_pose.theta))
-
-    #move(2.0, 9.0, True)
-    #rotate(degrees2radians(20), degrees2radians(90), False)
- #   move(2.0, 9.0, True)
-  #  rotate(degrees2radians(20), degrees2radians(90), False)
- #   move(2.0, 1.0, True)
-#    rotate(degrees2radians(20), degrees2radians(90), False)
- #   move(2.0, 9.0, True)
-  #  rotate(degrees2radians(30), degrees2radians(90), True)
-   # move(2.0, 1.0, True)
-  #  rotate(degrees2radians(30), degrees2radians(90), True)
-   # move(2.0, 9.0, True)
-   # pass
-
-
-#def spiralClean():
- #   vel_msg = Twist()
-  #  loop_rate = rospy.Rate(1)
-   # wk = 4
-    #rk = 0
-
-    #while((currentTurtlesimPose.x<10.5) and (currentTurtlesimPose.y<10.5)):
-#        rk=rk+1
- #       vel_msg.linear.x =rk
-  #      vel_msg.linear.y =0
-   #     vel_msg.linear.z =0
-    #    vel_msg.angular.x = 0
-     #   vel_msg.angular.y = 0
-      #  vel_msg.angular.z =wk
-  #      velocity_publisher.publish(vel_msg)
-   #     loop_rate.sleep()
-#
- #   vel_msg.linear.x = 0
-  #  vel_msg.angular.z = 0
-   # velocity_publisher.publish(vel_msg)
-
-
 
 if __name__ == '__main__':
     try:
